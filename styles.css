@@ -1,0 +1,166 @@
+body {
+    background-color: #E6E7E8;
+    color: rgb(59, 58, 58);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+  background-color: black;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul li {
+  margin: 0;
+}
+
+nav a {
+  color: white;
+  text-align: center;
+  padding: 0.9375em 4.375em;
+  text-decoration: none;
+  font-size: 1.0625em; 
+}
+
+nav a:hover {
+  background-color: gray;
+}
+
+h1 {
+  text-align: center;
+  margin: 1em 0;
+  color: black;
+}
+
+.balk {
+  background-color: black;
+  color: white; 
+  padding: 1em;
+  text-align: center;
+  margin: 1em 0;
+}
+
+section {  
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  padding: 1.25em;
+}
+
+.person {
+  width: 150px;
+}
+
+h2 {
+  font-size: 1.25em;
+  margin: 0.625em 0 0.3125em 0;
+  color: black;
+}
+
+div img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.episodes {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25em;
+}
+
+.video-container {
+  display: flex;
+  background-color: gray;
+  color: white;
+  padding: 1.25em;
+}
+
+.video-thumbnail {
+  width: 150px;
+  height: auto;
+  margin-right: 1.25em;
+  border-radius: 0%;
+}
+
+.video-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.episode-title {
+  text-align: left;
+}
+
+.episode-description {
+  text-align: left;
+  font-size: 1em;
+  color: black;
+}
+
+.subscribe-button {
+  background-color: #AE1F29;
+  color: white;
+  padding: 0.625em 1.25em;
+  text-decoration: none;
+  border-radius: 1.875em;
+  font-size: 1.0625em;
+  font-weight: bold;
+}
+
+.subscribe-button:hover {
+  background-color: #848181;
+}
+
+.social-media {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1.5em;
+  margin-top: 1.325em;
+}
+
+.social-icon img {
+ padding: 0.625em;
+transition: transform 0.3s;
+}
+
+.social-icon img:hover {
+transform: scale(1.2);
+}
+
+h3 {
+  color: black;
+  font-size: 2em;
+}
+
+html, body {
+  height: 100%;       
+  margin: 0;         
+}
+
+.container {
+  min-height: 65vh; 
+  display: flex;     
+  flex-direction: column; 
+}
+
+.content {
+  flex: 1;         
+}
+
+.footer {
+  background-color: #f1f1f1;
+  padding: 20px; 
+  text-align: center; 
+  position: fixed;
+}

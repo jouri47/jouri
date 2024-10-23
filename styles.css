@@ -1,12 +1,29 @@
 body {
-    background-color: #E6E7E8;
-    color: rgb(59, 58, 58);
-    margin: 0;
-    padding: 0;
+  font-family: 'Playfair Display', serif;
+  line-height: 1.6;
+  background-color: #E6E7E8;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
+
+.highlighted-text {
+  background-color: black;
+  color: white;
+  padding: 1em; 
+  border-radius: 8px;
+  font-size: 1.2em;
+  text-align: center;
+  max-width: 800px;
+  margin: 6em auto 2em auto;
+}
+
 
 header {
   background-color: black;
+  padding: 1em 0;
 }
 
 nav ul {
@@ -18,58 +35,57 @@ nav ul {
   align-items: center;
 }
 
-nav ul li {
-  margin: 0;
-}
-
 nav a {
   color: white;
   text-align: center;
-  padding: 0.9375em 4.375em;
+  padding: 0.9375em 2em;
   text-decoration: none;
-  font-size: 1.0625em; 
+  font-size: 1.0625em;
 }
 
 nav a:hover {
   background-color: gray;
 }
 
-h1 {
+h1, h2 {
   text-align: center;
-  margin: 1em 0;
   color: black;
 }
 
-.balk {
-  background-color: black;
-  color: white; 
-  padding: 1em;
-  text-align: center;
+h1 {
   margin: 1em 0;
-}
-
-section {  
-  display: flex;
-  justify-content: space-evenly;
-  text-align: center;
-  padding: 1.25em;
-}
-
-.person {
-  width: 150px;
 }
 
 h2 {
   font-size: 1.25em;
-  margin: 0.625em 0 0.3125em 0;
-  color: black;
+  margin: 0.625em 0 0.3125em;
 }
 
-div img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
+main.team {
+  display: flex;
+  justify-content: center;
+  gap: 1.875em;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.team .person {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 300px;
+}
+
+.team .person p {
+  text-align: left;
+}
+
+.team .person img {
+  max-width: 100%;
+  height: auto;
   border-radius: 50%;
+  margin-top: 1.875em;
 }
 
 .episodes {
@@ -89,7 +105,6 @@ div img {
   width: 150px;
   height: auto;
   margin-right: 1.25em;
-  border-radius: 0%;
 }
 
 .video-info {
@@ -97,12 +112,12 @@ div img {
   flex-direction: column;
 }
 
-.episode-title {
+.episode-title,
+.episode-description {
   text-align: left;
 }
 
 .episode-description {
-  text-align: left;
   font-size: 1em;
   color: black;
 }
@@ -121,46 +136,79 @@ div img {
   background-color: #848181;
 }
 
+.social-media-title {
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+
 .social-media {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-  gap: 1.5em;
-  margin-top: 1.325em;
+  gap: 2.5em;
+  width: 100%;
+  margin-top: 2.5em;
 }
 
 .social-icon img {
- padding: 0.625em;
-transition: transform 0.3s;
+  width: 120px;
+  height: 120px; 
+  border-radius: 50%;
+  transition: 0.3s;
 }
 
 .social-icon img:hover {
-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  padding: 1.25em;
+}
+
+footer {
+  border-top: 0.0625em solid gray;
+  background-color: gray;
+  color: #333;
+  text-align: left;
+  padding: 0.625em 1.25em;
+  width: 100%;
+}
+
+.footer-content {
+  max-width: 75em;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-content a {
+  color: #333;
+  text-decoration: none;
+}
+
+.footer-content a:hover {
+  text-decoration: underline;
+}
+
+
+.footer-content a:hover {
+  text-decoration: underline;
 }
 
 h3 {
   color: black;
   font-size: 2em;
-}
-
-html, body {
-  height: 100%;       
-  margin: 0;         
-}
-
-.container {
-  min-height: 65vh; 
-  display: flex;     
-  flex-direction: column; 
-}
-
-.content {
-  flex: 1;         
-}
-
-.footer {
-  background-color: #f1f1f1;
-  padding: 20px; 
-  text-align: center; 
-  position: fixed;
 }

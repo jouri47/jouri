@@ -4,22 +4,30 @@ body {
   background-color: #E6E7E8;
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
   min-height: 100vh;
 }
 
 .highlighted-text {
   background-color: black;
   color: white;
-  padding: 1em; 
+  padding: 1em;
   border-radius: 8px;
   font-size: 1.2em;
   text-align: center;
   max-width: 800px;
   margin: 6em auto 2em auto;
+  position: relative;
+  animation: moveCenter 2s forwards;
 }
 
+@keyframes moveCenter {
+  0% {
+    transform: translateX(-100vw); 
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 
 header {
   background-color: black;
@@ -61,7 +69,7 @@ h2 {
   margin: 0.625em 0 0.3125em;
 }
 
-main.team {
+.team {
   display: flex;
   justify-content: center;
   gap: 1.875em;
@@ -70,15 +78,8 @@ main.team {
 }
 
 .team .person {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   text-align: center;
   max-width: 300px;
-}
-
-.team .person p {
-  text-align: left;
 }
 
 .team .person img {
@@ -88,38 +89,35 @@ main.team {
   margin-top: 1.875em;
 }
 
-.episodes {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25em;
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-.video-container {
+article {
   display: flex;
-  background-color: gray;
-  color: white;
+  align-items: flex-start;
+  background-color: #808080;
   padding: 1.25em;
+  box-shadow: 0 0.25em 0.375em rgba(0, 0, 0, 0.1);
+  margin-bottom: 1em;
 }
 
-.video-thumbnail {
-  width: 150px;
+article img {
+  width: 9.375em;
   height: auto;
+  border-radius: 0.5em;
   margin-right: 1.25em;
 }
 
-.video-info {
-  display: flex;
-  flex-direction: column;
+.text-content h2 {
+  font-size: 1.5em;
+  margin: 0 0 0.625em;
 }
 
-.episode-title,
-.episode-description {
-  text-align: left;
-}
-
-.episode-description {
-  font-size: 1em;
-  color: black;
+.text-content p {
+  margin: 0;
 }
 
 .subscribe-button {
@@ -136,26 +134,16 @@ main.team {
   background-color: #848181;
 }
 
-.social-media-title {
-  text-align: center;
-  font-size: 1.5em;
-  margin-bottom: 1em;
-}
-
-.social-media {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2.5em;
-  width: 100%;
-  margin-top: 2.5em;
+.social-icon {
+  display: inline-block;
+  margin: 5em 1.5em 0;
 }
 
 .social-icon img {
   width: 120px;
-  height: 120px; 
+  height: 120px;
   border-radius: 50%;
-  transition: 0.3s;
+  transition: transform 0.3s;
 }
 
 .social-icon img:hover {
@@ -184,31 +172,49 @@ footer {
   text-align: left;
   padding: 0.625em 1.25em;
   width: 100%;
-}
-
-.footer-content {
-  max-width: 75em;
-  margin: 0 auto;
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.footer-content a {
+footer a {
   color: #333;
   text-decoration: none;
 }
 
-.footer-content a:hover {
-  text-decoration: underline;
-}
-
-
-.footer-content a:hover {
+footer a:hover {
   text-decoration: underline;
 }
 
 h3 {
   color: black;
   font-size: 2em;
+}
+
+.blood-drop {
+  position: absolute;
+  top: 100px;
+  right: 10px;
+  width: 70px;
+  opacity: 0;
+  animation: drip 2.5s ease-in-out infinite;
+}
+
+@keyframes drip {
+  0% {
+      top: 100px;
+      opacity: 0;
+  }
+  10% {
+      opacity: 1;
+  }
+  60% {
+      top: 250px;
+      opacity: 1;
+  }
+  100% {
+      top: 300px;
+      opacity: 0;
+  }
 }

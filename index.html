@@ -1,37 +1,38 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>True Crimes</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jouri's Pizza</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <nav> 
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="overons.html">Over ons</a></li>
-          <li><a href="afleveringen.html">Afleveringen</a></li>
-          <li><a href="https://apple.com/podcast-link" class="subscribe-button">Abonneer</a></li>
-          <li><a href="volgons.html">Volg ons</a></li>
-        </ul>
-    </nav>
-    <img src="images/bd.png" alt="Bloed Druppel" class="blood-drop">
 
+  <header>
+    <h1>🍕 Toppie Tamagotchi Pizza 🍕</h1>
   </header>
 
+  <div id="saldo-container">
+    <div id="saldo-display">
+      <span id="saldo">1.00</span>
+    </div>
+  </div>
+
   <main>
-    <h1><img src="images/logo.png" alt="Podcast logo met een mes"></h1>
+    <div class="pizza-container">
+      <img id="pizza-base" src="images/bodem.png" alt="Pizza Bodem">
+      <div id="toppings-container"></div>
+      <img id="steam" src="images/steam.png" alt="Steam">
+    </div>
 
-    <p class="highlighted-text">
-      Van spannende misdaden naar koudbloedige killers, deze podcast is niet voor de weak. Leef elke zondag mee met de duistere verhalen van je favoriete seriemoordenaar.
-    </p>
+    <div id="buttons"></div>
+
+    <div id="work-section">
+      <button id="work-button">💼 Werk!</button>
+      <p id="work-message">Je moet werken :(</p>
+    </div>
   </main>
-
-  <footer>
-        &copy; 2024 Jouri. Alle rechten voorbehouden. <a href="privacy.html">Privacybeleid</a>
-</footer>
-  
+  <script src="java.js"></script>
 </body>
 </html>
